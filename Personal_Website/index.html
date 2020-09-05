@@ -71,24 +71,28 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
+								<form method="GET" action="form_info.html">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="name" id="name" required />
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="text" name="email" id="email" required />
 										</div>
 										<div class="field">
+
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+
+											<textarea id="contacts-textarea" name="message" id="message" rows="4" maxlength="140" required></textarea>
+											<div id="charsremaining">140 remaining characters</div>
+
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
+										<li><input type="submit" value="Send Message" class="primary" required/></li>
+										<!-- <li><input type="reset" value="Reset" /></li> -->
 									</ul>
 								</form>
 								<ul class="icons">
@@ -341,7 +345,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; Leo Zhang 2020</p>
 					</footer>
 
 			</div>
@@ -349,12 +353,25 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		<!-- BG -->
 			<div id="bg"></div>
 
+		<!-- custom scripts -->
+		<script src="custom_assets/js_files/ContactsPage.js"></script>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first
+	<script src="/__/firebase/7.19.1/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+	<!-- <script src="/__/firebase/7.19.1/firebase-analytics.js"></script> -->
+
+	<!-- Initialize Firebase -->
+	<!-- <script src="/__/firebase/init.js"></script> -->
 
 	</body>
+
 </html>
