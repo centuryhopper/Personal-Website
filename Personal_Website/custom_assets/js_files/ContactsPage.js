@@ -1,5 +1,12 @@
 // begin
 
+function TitleCase(myStr)
+{
+    return myStr.toLowerCase().split(' ')
+        .map(name => name.charAt(0)
+            .toUpperCase() + name.substring(1)).join(' ');
+}
+
 function ManageContact()
 {
     // reference the num chars remaining msg and textarea element
@@ -8,7 +15,8 @@ function ManageContact()
     var MAX_CHAR = 140;
 
     // text area managing
-    textArea.addEventListener("input", () => {
+    textArea.addEventListener("input", () =>
+    {
 
         // console.log("got input");
         console.log(textArea.value);
@@ -22,8 +30,13 @@ function ManageContact()
         numCharsRemaining.style.color = color;
     });
 
-    // todo make sure that the first and last name
-    // todo are force capitalized
+    // makes sure that the first and last name
+    // are force capitalized
+    var nameInput = document.getElementById("name");
+    nameInput.addEventListener("input", () =>
+    {
+        nameInput.value = TitleCase(nameInput.value);
+    });
 }
 
 // simiulate a main method from languages like java and C
@@ -36,10 +49,6 @@ function Main()
 
 
 
+
 // runs the Main method
 Main();
-
-
-
-
-
