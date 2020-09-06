@@ -24,21 +24,31 @@ function HandlePostRequest()
     app.use(express.static('public'));
     app.get('/index.html', function (req, res)
     {
-        res.sendFile(__dirname + "/" + "index.html");
+        res.sendFile(__dirname + "/index.html");
     });
 
+    // app.set('views', __dirname + '/views');
+    // app.set('view engine', 'html');
+
+    app.engine('html', require('ejs').renderFile);
     app.post('/process_post', urlencodedParser, function (req, res)
     {
-        res.send('Thank you :) Your form has been received');
+        // todo important DO NOT use res.send and res.render in one api call
+        // res.send('<h1>Thank you :) Your form has been received</h1><br/>');
+        // res.send('<p>Thank you kind sir/ma\'am</p>');
+
         // Prepare output in JSON format
         response = {
             name: req.body.name,
             email: req.body.email,
             message: req.body.message,
         };
-        console.log(response);
-        res.end(JSON.stringify(response));
 
+        console.log(response);
+        
+        // response page telling the user that the form has been submitted
+        res.render('submission_page.html');
+        res.end(JSON.stringify(response));
     });
 
     var server = app.listen(8081, function ()
@@ -46,7 +56,7 @@ function HandlePostRequest()
         var host = server.address().address;
         var port = server.address().port;
 
-        console.log("Example app listening at http://%s:%s", host, port)
+        console.log("Example app listening at http://%s:%s", host, port);
     });
 }
 
