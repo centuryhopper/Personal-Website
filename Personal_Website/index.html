@@ -46,18 +46,30 @@
 							<article id="intro">
 								<h2 class="major">Intro</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>BRIEFLY TALK ABOUT YOUR PROFESSIONAL LIFE AND THEN INTRODUCE YOUR PROJECTS</p>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+								<!-- <p>BRIEFLY TALK ABOUT YOUR PROFESSIONAL LIFE AND THEN INTRODUCE YOUR PROJECTS</p> -->
+								<p>Mobile, game, and Web developer</p>
+								<p>I have been coding for about 3 years since I started majoring in Computer Science.
+									I love computer science and the way everything works together in an orderly fashion,
+									and I am looking forward to advancing my skills by working on different projects
+								</p>
 							</article>
 
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">Work</h2>
+								<!-- vacation website example -->
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 								<p>showcase your past projects here perhaps include a brief video or image</p>
 								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
 								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+
+								<!-- react keeper app -->
+
+								<!-- Senior design project -->
+
+								<!-- desperate escape game -->
+
+								<!-- flutter todo app -->
 							</article>
 
 						<!-- About -->
@@ -69,37 +81,7 @@
 							</article>
 
 						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="POST" action="http://127.0.0.1:8081/process_post">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" placeholder="first and last name" required />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" required />
-										</div>
-										<div class="field">
-
-											<label for="message">Message</label>
-
-											<textarea id="contacts-textarea" name="message" id="message" rows="4" maxlength="140" required></textarea>
-											<div id="charsremaining">140 remaining characters</div>
-
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" required/></li>
-										<!-- <li><input type="reset" value="Reset" /></li> -->
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
+							<article id="contact"></article>
 
 						<!-- Elements -->
 							<article id="elements">
@@ -342,6 +324,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							</article>
 
 					</div>
+					<!-- <div id="like_button_container"></div> -->
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -354,7 +337,21 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<div id="bg"></div>
 
 		<!-- custom scripts -->
+		<!-- Load React. -->
+		<!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+		<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+		<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+
+		<!-- Load our React component. -->
+		<!-- <script src="./custom_assets/js_files/like_button.jsx"></script> -->
+		<script src="./custom_assets/js_files/handle_form.jsx"></script>
+
 		<script src="custom_assets/js_files/ContactsPage.js"></script>
+
+
+
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -362,6 +359,15 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+
+
+
+
+
+
+
+
 	<!-- The core Firebase JS SDK is always required and must be listed first
 	<script src="/__/firebase/7.19.1/firebase-app.js"></script>
 

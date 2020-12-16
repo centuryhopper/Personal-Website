@@ -17,14 +17,12 @@ function ManageContact()
     // text area managing
     textArea.addEventListener("input", () =>
     {
-
         // console.log("got input");
         console.log(textArea.value);
 
         // keep track of the text area input characters' length
-        remainingChars = MAX_CHAR - textArea.value.length;
+        const remainingChars = MAX_CHAR - textArea.value.length;
         const color = remainingChars <= 0 ? 'red' : null;
-
 
         numCharsRemaining.textContent = remainingChars + " remaining characters";
         numCharsRemaining.style.color = color;

@@ -1,3 +1,26 @@
 
+body {
+    /* 26, 29, 32 */
+    background-color: #262932;
+    font-family: "Source Sans Pro", sans-serif;
+    color: white;
+}
+
+h1, div{
+    text-align: center;
+    font-family: "Courier New", monospace;
+    font-weight: 600;
+}
+
+.img {
+    margin-top: 5%;
+    text-align: center;
+}
+
+a{
+    color: black;
+    font-family: "Courier New", monospace;
+    font-weight: 600;
+}
 
 

@@ -12,6 +12,8 @@
 //    console.log("Example app listening at http://%s:%s", host, port);
 // });
 
+
+
 function HandlePostRequest()
 {
     var express = require('express');
@@ -22,6 +24,8 @@ function HandlePostRequest()
     var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
     app.use(express.static('public'));
+
+    // get information from index.html doc
     app.get('/index.html', function (req, res)
     {
         res.sendFile(__dirname + "/index.html");
@@ -31,6 +35,7 @@ function HandlePostRequest()
     // app.set('view engine', 'html');
 
     app.engine('html', require('ejs').renderFile);
+
     app.post('/process_post', urlencodedParser, function (req, res)
     {
         // todo important DO NOT use res.send and res.render in one api call
@@ -45,9 +50,9 @@ function HandlePostRequest()
         };
 
         console.log(response);
-        
+
         // response page telling the user that the form has been submitted
-        res.render('submission_page.html');
+        // res.render('submission_page.html');
         res.end(JSON.stringify(response));
     });
 
@@ -56,7 +61,7 @@ function HandlePostRequest()
         var host = server.address().address;
         var port = server.address().port;
 
-        console.log("Example app listening at http://%s:%s", host, port);
+        console.log("app listening at http://%s:%s", host, port);
     });
 }
 
